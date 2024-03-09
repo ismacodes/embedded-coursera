@@ -9,32 +9,107 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h 
+ * @brief Header file for statistics assignment.
  *
- * <Add Extended Description Here>
+ * This is for ese course c1m1.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Ismael Castro
+ * @date September 4, 2023
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
+#include <stddef.h>
+
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief A funciton that prints the statistics of an array including minimum,
+ * maximum, mean, and median.
  *
- * <Add Extended Description Here>
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <data> An array of unsigned chars.
  *
- * @return <Add Return Informaiton here>
+ * @return This function does not return anything. Void.
  */
+
+void print_statistics(unsigned char data[]); 
+
+/**
+ * @brief Given an array of data and a length, prints the array to the screen.
+ * 
+ *
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return This function does not return anything. Void.
+ */
+
+void print_array(unsigned char data[], size_t length);
+
+/**
+ * @brief Given an array of data and a length, returns the median value.
+ *
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return The median value of the input data. Type: unsigned char.
+ */
+
+unsigned char find_median(unsigned char data[], size_t length);
+
+/**
+ * @brief Given an array of data and a length, returns the mean value.
+ *
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return The mean value of the input data. Type: unsigned char.
+ */
+
+unsigned char find_mean(unsigned char data[], size_t length);
+
+/**
+ * @brief Given an array of data and a length, returns the maximum value.
+ *
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return The maximum value of the input data. Type: unsigned char.
+ */
+
+unsigned char find_maximum(unsigned char data[], size_t length);
+
+/**
+ * @brief Given an array of data and a length, returns the minimum value.
+ *
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return The minimum value of the input data. Type: unsigned char.
+ */
+
+unsigned char find_minimum(unsigned char data[], size_t length);
+
+/**
+ * @brief Given an array of data and a length, sorts the array from largest to smallest.
+ *
+ * The 0th element should be the largest value, and the last element should be the smallest.
+ *
+ * @param <data> An array of unsigned chars. 
+ * @param <length> The length of the array in `data`
+ *
+ * @return There is no return value. Void. Upon return `data` is sorted.
+ */
+
+void sort_array(unsigned char data[], size_t length);
 
 
 #endif /* __STATS_H__ */
